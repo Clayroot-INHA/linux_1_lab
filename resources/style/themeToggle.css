@@ -1,0 +1,91 @@
+/* Dark Theme Global CSS (by Yusuf) */
+
+html[theme='dark'] {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+html[theme='dark'] {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+.invert {
+	filter: invert(1) hue-rotate(180deg);
+}
+
+
+/* Container */
+
+.theme-toggle-container {
+	z-index: 100;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 85px;
+}
+
+.theme-toggle-container span {
+	font-size: 1rem;
+	/* color: black; */
+}
+
+/* Box Around Slider */
+
+.theme-toggle {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 24px;
+}
+
+/* Hide Default HTML Checkbox */
+
+.theme-toggle input {
+	display: none;
+}
+
+/* Slider */
+
+.slider {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #CCCCCC;
+	transition: 0.4s;
+	cursor: pointer;
+}
+
+.slider::before {
+	position: absolute;
+	bottom: 3px;
+	left: 4px;
+	width: 18px;
+	height: 18px;
+	background-color: white;
+	content: '';
+	transition: 0.4s;
+	-webkit-transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color:  rgb(150, 65, 255);
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider::before {
+	transform: translateX(35px);
+}
+
+/* Rounded Slider */
+
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round::before {
+	border-radius: 50%;
+}
